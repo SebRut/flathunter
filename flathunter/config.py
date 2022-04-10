@@ -10,6 +10,7 @@ from flathunter.crawl_immowelt import CrawlImmowelt
 from flathunter.crawler_subito import CrawlSubito
 from flathunter.crawl_immobiliare import CrawlImmobiliare
 from flathunter.crawl_idealista import CrawlIdealista
+from flathunter.crawl_tagwohnen import CrawlTagWohnen
 from flathunter.filter import Filter
 
 class Config:
@@ -32,7 +33,8 @@ class Config:
                               CrawlImmowelt(self),
                               CrawlSubito(self),
                               CrawlImmobiliare(self),
-                              CrawlIdealista(self)]
+                              CrawlIdealista(self),
+                              CrawlTagWohnen(self)]
 
     def __iter__(self):
         """Emulate dictionary"""
